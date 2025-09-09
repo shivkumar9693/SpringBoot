@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+ <bean class="com.springcore.springcore.Student" name="student">
+ <property name="StudentId"><value>01</value></property>
+ <property name="StudentName"><value>shiv</value></property>
+ <property name="StudentAddress"><value>delhi</value></property>
+ </bean>
+ <!--Or we can also give value in property tag directly like-->
+  <bean class="com.springcore.springcore.Student" name="student1">
+ <property name="StudentId" value="10"/>
+ <property name="StudentName" value="Shiv Kumar"/>
+ <property name="StudentAddress" value="Madhubani"/> 
+ </bean>
+  <!--Using p schema we donot need to write that much here is example-->
+  <bean class="com.springcore.springcore.Student" name="student2" p:StudentId="02" p:StudentName="Shiv kumar thakur" p:StudentAddress="Madhubani"/>
+</beans>
+<!--These are the three method we can write xml file-->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:c="http://www.springframework.org/schema/c"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 	<bean class="com.springcore.ConstructorInjection.Course" name="course" c:name="Java Course"/>
+ 	<bean class="com.springcore.ConstructorInjection.Person" name="person">
+ 	<constructor-arg value="Shiv"/>
+ 	<constructor-arg >
+ 	 <list>
+ 	 <value>9080765432</value>
+ 	 <value>6543927927</value>
+ 	 </list>
+ 	</constructor-arg>
+ 	<constructor-arg ref="course"/>
+ 	</bean>
+</beans>

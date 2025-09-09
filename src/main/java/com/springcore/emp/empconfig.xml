@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean class="com.springcore.emp.Emp" name="emp1">
+	<property name="name" value="Ram"/>
+	<property name="phones">
+		<list>
+			<value>9087964590</value>
+			<value>9087964590</value>
+			<value>9087964590</value>
+			<value>9087964590</value>
+		</list>
+	</property>
+	<property name="email">
+		<set>
+			<value>ram@gmail.com</value>
+			<value>ram2@gmail.com</value>
+		</set>
+	</property>
+	<property name="post">
+		<map>
+			<entry key="manager" value="500000"/>
+			<entry key="Developer" value="200000"/>
+		</map>
+	</property>
+</bean>
+</beans>

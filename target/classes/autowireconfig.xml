@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:c="http://www.springframework.org/schema/c"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd
+">
+	<context:annotation-config/>
+ <bean class="com.springcore.AutoWire.Address" name="address">
+	 <property name="city" value="delhi"/>
+	 <property name="country" value="india"/>
+ </bean>
+	<bean class="com.springcore.AutoWire.Emp" name="emp1" autowire="byName"></bean>
+<!--	Autowiring-->
+	<bean class="com.springcore.AutoWireAnnotation.Address" name="autoaddress">
+		<property name="city" value="patna"/>
+		<property name="pincode" value="847224"/>
+	</bean>
+	<bean class="com.springcore.AutoWireAnnotation.Person" name="person"></bean>
+</beans>
